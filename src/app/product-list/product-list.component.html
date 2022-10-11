@@ -4,10 +4,12 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                <div *ngFor="let i of productData" class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
                     <div class="card">
-                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/katariy/Events_22/Jupiter_2022/CLPnewtiles/xcm_banners_2022_jupiter_ph1_wireless_434x641_m13_v1_434x641_in-en.jpg" class="card-img-top" alt="...">
+                        <img height="300px"src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
+                          <h5 class="card-title">{{i.title}}</h5>
+                          <p class="card-text">{{i.price}}</p>
                           <a href="/product1" class="btn btn-primary">View</a>
                         </div>
                     </div>
